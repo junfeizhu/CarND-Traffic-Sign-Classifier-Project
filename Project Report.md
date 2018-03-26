@@ -5,15 +5,15 @@ I used the pandas library to calculate summary statistics of the traffic signs d
 Each traffic sign image is a 32 by 32 image. There are 43 unique classes in the data set. There are 34799 examples in the training set, 4410 examples in the validation set and 12630 examples in the test set. Then I investigated the training set further. The training set is very imbalance. Class 2, Speed limit (50km/h)
  , has the most examples, which is 2010. However, class 37, Go straight or left, has the least examples, which is only 180. The bar chart for the number of examples of each class is shown below:
  
- ![barchart](https://note.youdao.com/favicon.ico)
+ ![barchart](https://raw.githubusercontent.com/junfeizhu/CarND-Traffic-Sign-Classifier-Project/master/images_for_writeup/barchart.png)
  
  Then I also plotted 10 random images for each class to check how do these traffic signs actually look like. You can check my python notebook for these images. Below is just a part of them:
  
- ![traffic_sign_images](https://note.youdao.com/favicon.ico)
+ ![traffic_sign_images](https://raw.githubusercontent.com/junfeizhu/CarND-Traffic-Sign-Classifier-Project/master/images_for_writeup/traffic_sign_images.png)
  
 ##  Design and Test a Model Architecture
 As a first step, I decide to generate additional data because as mentioned earlier, some classes have extremly few examples in the training set. Then I generated 10 more times of images for each class. I used rotation, translantion and shear operations to generate new images. All these operations are wrapped in the function 'transform_image()'. This functions is inspired by [this post](https://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9) recommended by my mentor. Here is an example of an original image and an augmented image:
-![data_aug](https://note.youdao.com/favicon.ico)
+![data_aug](https://raw.githubusercontent.com/junfeizhu/CarND-Traffic-Sign-Classifier-Project/master/images_for_writeup/data_aug.png)
 
 Then I transformed the image to grayscale and normalized the image so that the number in each pixel is between 0.1 and 0.9. This will make the numerical computation more stable.
 
@@ -52,7 +52,7 @@ After 100 epochs, the training accuracy is 0.962, the validation accuracy is 0.9
 ## Test a Model on New Images
 Here are five German traffic signs that I found on the web,which are resized to 32 by 32, grayscaled and normalized:
 
-![test_web_images](https://note.youdao.com/favicon.ico)
+![test_web_images](https://raw.githubusercontent.com/junfeizhu/CarND-Traffic-Sign-Classifier-Project/master/images_for_writeup/test_web_images.png)
 
 Here are the results of the prediction:
 
