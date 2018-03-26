@@ -69,7 +69,7 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 And the top 5 softmax probabilities for each image are listed below:
 
 |Image 1        ||        Image 2||
-|-------|-------|---------|-------|---------|-------|---------|-------|---------|-------|
+|-------|-------|---------|-------|
 |Probability|Prediction|Probability|Prediction|
 |0.397|Roundabout mandatory|0.999|Stop|
 |0.288|Speed limit (50km/h)|0.000|Turn right ahead|
